@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
+
 export const Narbar = () => {
+  
   return (
     <div className="nav">
       <div className="logo">
@@ -10,17 +12,19 @@ export const Narbar = () => {
       </div>
       <div>
         <div className="nav-links">
-          <div className="nav-item">
-            <Link className="nav-link" to="/">
-              Home
-            </Link>
-          </div>
           
-          <div className="nav-item">
-            <Link className="nav-link" to="/projects">
-              Projects
-            </Link>
-          </div>
+            <div className="nav-item">
+              <Link className="nav-link" to="/" >
+                Home
+              </Link>
+            </div>
+            <div className="nav-item">
+              <Link className="nav-link" to="/projects" >
+                projects
+              </Link>
+            </div>
+        
+
           <div className="nav-item">
             <Link className="nav-link" to="/about">
               About
