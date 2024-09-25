@@ -10,8 +10,9 @@ export const Home = () => {
     fullName: "",
     role: "",
   });
-  const navigate = useNavigate();
+  
 
+  const navigate = useNavigate();
   const handleSwitchToLogin = () => setIsLogin(true);
   const handleSwitchToRegister = () => setIsLogin(false);
 
@@ -33,11 +34,9 @@ export const Home = () => {
         console.log(
           localStorage.setItem("accessToken", response.data.accessToken)
         );
-      alert("Log in successful")
-      navigate('/app')
-       
+        alert("Log in successful");
+        navigate("/app");
       } else {
-        // No need to define response if we don't use it
         await axios.post("http://localhost:7000/register", {
           fullName: formData.fullName,
           email: formData.email,
@@ -45,7 +44,7 @@ export const Home = () => {
           role: formData.role,
         });
         alert("Registration successful");
-        handleSwitchToLogin()
+        handleSwitchToLogin();
       }
     } catch (error) {
       console.error(error);
